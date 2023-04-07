@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type=search] {
+            border: 1px dotted #999;
+            border-radius: 0;
+            -webkit-appearance: none;
+        }
+        .block1,.block2{
+            background-color: #ccffff;
+        }
+        body{
+            background-color: lightcyan;
+        }
+        legend{
+            color: brown;
+            font-size: 30px;
+        }
+        input,textarea{
+        background-color: antiquewhite; 
+        }
+        .page{
+            height: auto;
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <container class="page">
+        *Ces zones sont obligatoires<br>
+        <form action=" http://bienvu.net/script.php " method="get">
+            <fieldset class="block1">
+                <legend> Vos coordonnées</legend>
+                <label for="nom">Nom* :</label>
+                <input type="text" name="nom" id="nom" required>
+                <br>
+
+                <label for="prenom">Prenom* :</label>
+                <input type="text" name="prenom" id="prenom" required>
+                <br><br>
+
+                <label for="sexe">Sexe* :</label><br><br>
+                <input type="radio" name="sexe" value="feminin">Féminin
+                <input type="radio" name="sexe" value="masculin">Masculin
+                <br>
+
+                <label for="date">Date de naissance* :</label>
+                <input type="date" name="ddn" id="date" required>
+                <br>
+
+                <label for="codep">Code postal :</label>
+                <input type="text" name="codep">
+                <br>
+
+                <label for="adresse">Adresse :</label>
+                <input type="text" name="adresse">
+                <br>
+
+                <label for="Ville">Ville :</label>
+                <input type="text" name="Ville">
+                <br>
+
+                <label for="mail">Email* :</label>
+                <input type="email" name="email" required placeholder="dave.loper@afpa.fr">
+                <br>
+            </fieldset><br>
+
+            <fieldset class="block2">
+                <legend>Votre demande</legend>
+                <label for="commande">Sujet* :</label>
+                <input type="text" name="commande1" id="demande2" list="demande">
+                <datalist id="demande">
+                    <option value="Mes commandes">
+                    <option value="Question sur un produit">
+                    <option value="Réclamation">
+                    <option value="Autres">
+                </datalist>
+                <br>
+                <label for="question">Votre question* :</label>
+                <textarea id="question" name="question" rows="3" cols="25"></textarea>
+            </fieldset><br>
+            <input type="checkbox" name="secu" value="Secu" required>J'accepte le traitement informatique de ce
+            formulaire
+            <br><br>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Annuler">
+        </form>
+    </container>
+
+</body>
+
+</html>

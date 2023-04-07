@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CssPoissonerie.css" rel="stylesheet">
+    <title>OceansidePoissonerie</title>
+</head>
+
+<body>
+    <container id="page">
+        <header>
+            <h1>Contacts</h1>
+        </header>
+        <container id="boutons">
+            <section>
+                <button id="Home" type="button">
+                    HOME
+                </button>
+                <button id="Products" type="button">
+                    PRODUCTS
+                </button>
+                <button id="News" type="button">
+                    NEWS
+                </button>
+                <button id="Contact" type="button">
+                    CONTACTS
+                </button>
+            </section>
+        </container>
+        <br/><br/>
+        <container id="infos">
+            <div id="infoscontact">
+                Nous contacter :
+                <br/></br></br>
+                01 45 78 95 42
+                <br/></br></br>
+                oceansidepoissonerie@gmail.com
+                <br/></br></br>
+            </div>
+            <form method="get" id="commande">
+                <label for="name">Votre nom et prénom :<br/>
+                <input type="text" name="name" id="name">
+            </label><br/>
+                <label for="date">Date de livraison ou retrait de la commande :<br/>
+                <input type="date" name="date" id="date">
+            </label><br/>
+                <label for="adresse" id="adresse">Entrez votre adresse pour la livraison ou facturation :<br/>
+                    <input type="text" name="adresse" id="adresse"><br/></br>
+                    <textarea name="commande" id="commande" cols="50" rows="20" placeholder="Entrez les produits de votre commande"></textarea>
+                </label><br/>
+                <input type="submit" placeholder="Envoyer">
+            </form>
+        </container>
+    </body>
+
+        </html>
