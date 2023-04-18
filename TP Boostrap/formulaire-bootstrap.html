@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Les Formulaires</title>
+        <link href = "bootstrap.min-2.css" rel = "stylesheet" type = "text/css">
+    </head>
+    <body class="container-fluid">
+        <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+        <h1>Mon premier formulaire HTML 5</h1>
+        <form class="table" name="f1" id="contact" method="POST" action="bienvenue.html">
+            <!-- <fieldset> -->
+            <div class="card border-info mb-3" style="max-width: 40rem;">
+                <div class="card-body">
+                <label for="firstname">Prénom</label>
+                <input type="text" placeholder="votre prénom" pattern="[A-Za-z]{2,30}" autofocus="autofocus" id="firstname" style="margin-left:70"/>
+                <br/>
+                <label for="lastname">Nom</label>
+                <input type="text" placeholder="votre nom" pattern="[A-Za-z]{1,25}" id="lastname" />
+                <br/>
+                <label for="daten">Date de naissance</label>
+                <input type="date" name="daten" pattern="(0[1-9]|[12][0-9]|3[01])[\/](0[1-9]|1[012])[\/](19|20)\d\d"/>
+                <br/>
+                <!-- <fieldset>
+                    <legend>Lieu de naissance</legend> 
+                    <input type="radio" value="Seine-Saint-Denis" required="" name="lieu" checked/>
+                    <label for="lieu">Seine-Saint-Denis</label>
+                    <input type="radio" value="Reste du monde" required="" name="lieu" />
+                    <label for="lieu">Reste du monde</label>
+                </fieldset> -->
+                <div class="card border-info mb-3" style="max-width: 30rem;">
+                    <div class="card-body">
+                        <legend>Lieu de naissance</legend> 
+                        <input type="radio" value="Seine-Saint-Denis" required="" name="lieu" checked/>
+                        <label for="lieu">Seine-Saint-Denis</label>
+                        <input type="radio" value="Reste du monde" required="" name="lieu" />
+                        <label for="lieu">Reste du monde</label>
+                    </div>
+                </div>
+                <br/>
+                <label for="ap">Adresse postale</label>
+                <input type="text" name="ap" maxlength="90" required/>
+                <br/>
+                <label for="cp">Code postale</label>
+                <input type="number" name="cp" pattern=".{6,}" maxlength="5" required/>
+                <br/>
+                <label for="email">Adresse électronique</label>
+                <input type="email" name="email" />
+                <br/>
+                <label for="page">Page personnelle</label>
+                <input type="text" name="page" />
+                <br/>
+                <label for="tel">Téléphone portable</label>
+                <input type="tel" name="tel" />
+                <br/>
+                <label for="numero">Sémèstre</label>
+                <select name="numero" size="1">
+                    <option>S1
+                    <option>S2
+                    <option>S3
+                    <option>S4
+                    <option>S5
+                    <option>S6
+                </select>
+                <br/>
+                <label for="niveau">Niveau HTML</label>
+                <input type="range" min="0" max="10" step="1" name="niveau" />
+                <br/>
+                <fieldset>
+                <div class="card border-info mb-3" style="max-width: 30rem;">
+                    <div class="card-body">
+                        <legend>Connaissances</legend> 
+                        <input type="checkbox" value="HTML" required="" name="html" checked/>
+                        <label for="html">HTML</label>
+                        <input type="checkbox" value="CSS" required="" name="css" />
+                        <label for="css">CSS</label>
+                        <input type="checkbox" value="Formulaires" required="" name="formulaires"/>
+                        <label for="formulaires">Formulaires</label>
+                        <input type="checkbox" value="JavaScript" required="" name="javascript" />
+                        <label for="javascript">JavaScript</label>
+                    </div>
+                </div>
+                </fieldset>
+                <br/>
+                <input class="btn btn-success" type="submit" value="Envoyer" onclick="stocker()"/>
+            <!-- </fieldset> -->
+        </div>
+    </div>
+        </form>
+    </div>
+</div>
+    <script>
+        function stocker(){
+            localStorage.setItem("prenom",document.getElementById("firstname").value);
+            localStorage.setItem("nom",document.getElementById("lastname").value);
+            window.location = "bienvenue.html";
+        }
+    </script>
+    </body>
+</html>
