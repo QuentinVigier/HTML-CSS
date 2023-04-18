@@ -1,0 +1,89 @@
+html{
+    background-image: url(assets\img\Home\background-villagegreen.png);
+    background-size: 1220px;
+}
+*{
+    margin: 0 auto;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: darkblue;
+    
+}
+body{
+    height: auto;
+    width: 1220px;
+}
+#page{
+    background-color: white;
+}
+header{
+    height: 204px;
+    width: 100%;
+}
+#header1{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    padding-top: 10px;
+}
+#header2{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 60px;
+    right: 15%;
+    padding-top: 10px;
+    
+}
+#drapeau{
+    margin-left: 100px;
+    height: 25px;
+    margin-top: 5px;
+}
+#infos,#espaceclient,#panier{
+    margin-left: 40px;
+}
+#infos,#espaceclient{
+    margin-top: 7px;
+}
+#logo{
+    border-radius: 0% 0% 0% 0%;
+    position: absolute;
+    top: 0px;
+    left: 203px;
+}
+#bandes{
+    width: 100%;
+}
+#imagepub{
+    height: auto;
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 60px;
+    padding-bottom: 25px;
+    padding-top: 20px;
+}
+#bannièreprix{
+    padding-left: 30px;
+}
+#pictos{
+    width: 100%;
+}
+#titrecaté{
+    margin-left: 40px;
+}
+#catégories{
+    width: 1220px;
+    height: auto;
+}
+#ventespartenaires{
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+footer,#imgfooter{
+    width: 1220px;
+}
